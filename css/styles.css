@@ -55,6 +55,10 @@ color: var(--text-color);
     float: right;
 }
 
+.fwh-slide--bg-header {
+  background-color: var(--background-color);
+}
+
 .fwh-slide {
 height: 100vh;
 background: var(--civilian-color);
@@ -98,7 +102,8 @@ color: var(--civilian-color);
 #menu-button {
   width: 70px;
   height: 70px;
-  padding: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
   border: none;
   background-color: transparent;
   /* paths are relative to this CSS file */
@@ -107,6 +112,8 @@ color: var(--civilian-color);
   background-position: center;
   background-size: contain;
   cursor: pointer;
+  position: fixed;
+  z-index: 1;
 }
 
 /* Hover shows the open icon */
