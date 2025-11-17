@@ -3,19 +3,174 @@
 /* Global variables */
 
 :root {
-    
+    background-color: #D6D5C9;
+    --robber-color: #1D2D44; 
+    --civilian-color: #F0EBD8;
+    --detective-color: #902923;
+    --light-blue: #748CAB;
+    --Light-red: #A22C29;
+    --text-color: #0D1321;
 }
 
 /* Main styles */
 
-body {
+main {
+position: relative;
+max-width: 1080px;
+margin: 0 auto;
+}
 
+body {
+font-family: "arponasans", sans-serif;
+font-size: 16px;
+color: var(--text-color);
+margin: 0;
 }
 
 h1 {
+font-family: "clarendon wide sketch", serif;
+font-size: 48px;
+color: var(--detective-color);
+}
 
+h2 {
+font-family: "arponasans", sans-serif;
+font-size: 24px;
+color: var(--detective-color);
+}
+
+h3 {
+font-family: "clarendon wide sketch", serif;
+font-size: 24px;
+color: var(--civilian-color);
 }
 
 p {
+font-family: "arponasans", sans-serif;
+font-size: 16px;
+color: var(--text-color);
+}
 
+.img_deg {
+    float: right;
+}
+
+.fwh-slide {
+height: 100vh;
+background: var(--civilian-color);
+box-sizing: border-box;
+padding: 35px;
+}
+
+.fwh-slide--bg-robber {
+background: var(--robber-color);
+color: var(--civilian-color);
+}
+
+.fwh-slide--bg-detective {
+background: var(--detective-color);
+color: var(--civilian-color);
+}
+
+.fwh-slide p {
+    margin: 0;
+}
+.fwh-slide h1 {
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-family: "clarendon wide sketch", serif;
+        font-size: 36px;
+        color: var(--detective-color);
+    }
+
+    p {
+        font-family: "arponasans", sans-serif;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+}
+
+/* Navigation button (menu icon) */
+#menu-button {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  border: none;
+  background-color: transparent;
+  /* paths are relative to this CSS file */
+  background-image: url('../assets/file-closed.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/* Hover shows the open icon */
+#menu-button:hover {
+  background-image: url('../assets/file-open.png');
+}
+
+/* When menu is open keep the open icon */
+#menu-button.open {
+  background-image: url('../assets/file-open.png');
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: var(--detective-color); /* Black fallback color */
+  background-color: var(--Light-red); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
