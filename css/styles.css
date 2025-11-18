@@ -181,3 +181,101 @@ color: var(--civilian-color);
     right: 35px;
   }
 }
+
+div.scroll-container {
+  background-color: var(--light-blue);
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+.grid-alignment-parent {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: start;
+  gap: 3rem;
+}
+
+.grid-alignment-child {
+  width: auto;
+  min-height: 1em;
+}
+
+/* Story section specific styles */
+.fwh-slide--story {
+  background: #F3EEDC; /* warm beige like the mock */
+}
+
+.fwh-slide--story h1 {
+  margin-bottom: 1.25rem;
+}
+
+.fwh-slide--story p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* Portrait (image) decorative container */
+.portrait {
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+div.gallery:hover {
+  scale: 110%;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 40px;
+  text-align: center;
+  font-family: "clarendon wide sketch", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 6px 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
