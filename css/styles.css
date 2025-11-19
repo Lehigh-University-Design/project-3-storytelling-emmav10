@@ -222,7 +222,6 @@ div.scroll-container img {
   max-width: 600px;
 }
 
-/* Portrait (image) decorative container */
 .portrait {
   position: relative;
   width: 400px;
@@ -246,36 +245,106 @@ div.gallery img {
 }
 
 div.desc {
-  padding: 40px;
+  padding: 10px;
+  font-size: 23px;
   text-align: center;
   font-family: "clarendon wide sketch", serif;
 }
 
-* {
-  box-sizing: border-box;
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5em;
+  margin-bottom: 1em;
 }
 
-.responsive {
-  padding: 6px 6px;
-  float: left;
-  width: 24.99999%;
+.grid-child {
+  padding: 1px;
+  float: center;
+  width: 100%;
+  img {
+    scale: 80%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
+  .grid-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-child {
+    width: 100%;
     margin: 6px 0;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
+/* Attempt at Parallax Hold*/
+
+/* Attempt at Parallax Hold*/
+.hold-section {
+  height: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.hold-section .hold-sticky {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hold-section .hold-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 2em;
+}
+
+.hold-section .scrolling-images {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  height: 100px;
+}
+
+.hold-section .scrolling-images h3 {
+  color: var(--civilian-color);
+}
+
+/* Each intersection element becomes a horizontal card */
+.intersection-element {
+  display: block;
+  flex: 0 0 420px;
+  min-width: 320px;
+}
+
+.intersection-element > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.intersection-element img {
+  width: auto;
+  height: 600px;
+  max-height: 420px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 }
