@@ -60,7 +60,6 @@ color: var(--text-color);
 }
 
 .fwh-slide {
-height: 100vh;
 background: var(--civilian-color);
 box-sizing: border-box;
 padding: 35px;
@@ -180,6 +179,9 @@ color: var(--civilian-color);
     top: 15px;
     right: 35px;
   }
+  .fwh-slide .fwh-slide--landing-page {
+    background-image: url('../assets/louvre-landing-page-phone.png');
+  }
 }
 
 div.scroll-container {
@@ -209,7 +211,7 @@ div.scroll-container img {
 
 /* Story section specific styles */
 .fwh-slide--story {
-  background: #F3EEDC; /* warm beige like the mock */
+  background: #F3EEDC; 
 }
 
 .fwh-slide--story h1 {
@@ -220,6 +222,17 @@ div.scroll-container img {
   font-size: 18px;
   line-height: 1.8;
   max-width: 600px;
+}
+
+.fwh-slide--landing-page {
+  background-image: url('../assets/louvre-landing-page-desk.png');
+  background-size:cover;
+  background-position: center;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  margin-right: 1em;
+  height: 100vh;
 }
 
 .portrait {
@@ -314,7 +327,7 @@ div.desc {
 
 .hold-section .scrolling-images {
   position: relative;
-  width: 100%;
+  width: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -347,4 +360,8 @@ div.desc {
   max-height: 420px;
   object-fit: cover;
   box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.image-card {
+height: 700px;
 }
