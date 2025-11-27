@@ -72,7 +72,14 @@ color: var(--civilian-color);
 
 .fwh-slide--bg-detective {
 background: var(--detective-color);
+
+p {
+color: var(--civilian-color)
+}
+
+h1 {
 color: var(--civilian-color);
+}
 }
 
 .fwh-slide p {
@@ -88,6 +95,10 @@ color: var(--civilian-color);
         font-family: "clarendon wide sketch", serif;
         font-size: 36px;
         color: var(--detective-color);
+    }
+
+    .special-headline {
+        font-size: 48px;
     }
 
     p {
@@ -364,4 +375,32 @@ div.desc {
 
 .image-card {
 height: 700px;
+}
+
+.absolute-bubble {
+  position: absolute;
+  top: 70%;
+  right: 5%;
+  width:800px;
+  height:100%;
+}
+
+.special-headline {
+  font-family: "clarendon wide sketch", serif;
+  /* Responsive headline: min 32px, scales with viewport, max 72px */
+  font-size: clamp(32px, 6vw, 72px);
+  line-height: 1.02;
+}
+
+footer {
+  padding: 30px;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  
+  img {
+  float: right;
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;  
+}
 }
