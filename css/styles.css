@@ -319,7 +319,7 @@ div.desc {
   box-sizing: border-box;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 20px;
   align-self: flex-start;
   display: flex;
   justify-content: center;
@@ -342,8 +342,8 @@ div.desc {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem 1rem;
+  gap: 30px;
+  padding: 1rem 1rem;
   height: 100px;
 }
 
@@ -354,8 +354,8 @@ div.desc {
 /* Each intersection element becomes a horizontal card */
 .intersection-element {
   display: block;
-  flex: 0 0 420px;
-  min-width: 320px;
+  flex: 0 0 1000px;
+  min-width: 800px;
 }
 
 .intersection-element > div {
@@ -366,7 +366,7 @@ div.desc {
 }
 
 .intersection-element img {
-  width: auto;
+  width: 700px;
   height: 600px;
   max-height: 420px;
   object-fit: cover;
