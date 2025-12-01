@@ -409,3 +409,67 @@ a {
   color: var(--text-color);
   text-decoration: underline;
 }
+
+.grid-child-jewel {
+  padding: 1px;
+  float: center;
+  width: 100%;
+  background-color: var(--light-blue);
+  border-radius: 20px;
+
+  img {
+    scale: 80%;
+  }
+  div.desc {
+  padding: 15px;
+  font-size: 23px;
+  text-align: center;
+  font-family: "clarendon wide sketch", serif;
+  color: var(--detective-color);
+  }
+  p {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    font-family: "arponasans", sans-serif;
+  }
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 40px; /* Space between the columns/blocks */
+    justify-content: space-between; /* Distribute items with space between them */
+}
+
+.text-block {
+    flex: 1; /* Allows blocks to grow and shrink */
+    min-width: 300px; /* Ensures blocks don't get too narrow */
+    /* If you want three columns roughly equal, you could do: */
+    /* flex-basis: calc(33.33% - 20px); */ /* Adjust 20px based on half of your gap */
+    /* For a more flexible layout, 'flex: 1' is a good start */
+    display: flex;
+    flex-direction: column; /* Stack content within each block vertically */
+}
+
+.text-block p {
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.grid-child-news {
+  padding: 1px;
+  float: center;
+  width: 100%;
+
+  img {
+    scale: 80%;
+  }
+  div.desc {
+  padding: 1px;
+  font-size: 18px;
+  text-align: center;
+  font-family: "clarendon wide sketch", serif;
+  color: var(--civilian-color);
+  max-width: 300px;
+  }
+}
