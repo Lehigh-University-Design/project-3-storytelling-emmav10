@@ -456,6 +456,15 @@ a {
     font-weight: bold;
 }
 
+.desc-news {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "clarendon wide sketch", serif;
+    color: var(--light-blue);
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 768px) {
     h1 {
         font-family: "clarendon wide sketch", serif;
