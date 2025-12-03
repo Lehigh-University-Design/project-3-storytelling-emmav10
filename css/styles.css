@@ -89,25 +89,6 @@ color: var(--civilian-color);
     margin: 0;
 }
 
-
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-family: "clarendon wide sketch", serif;
-        font-size: 36px;
-        color: var(--detective-color);
-    }
-
-    .special-headline {
-        font-size: 48px;
-    }
-
-    p {
-        font-family: "arponasans", sans-serif;
-        font-size: 14px;
-        color: var(--text-color);
-    }
-}
-
 /* Navigation button (menu icon) */
 #menu-button {
   width: 70px;
@@ -208,16 +189,21 @@ div.scroll-container img {
 
 .grid-alignment-parent {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  grid-template-rows: auto;
-  justify-content: space-between;
-  align-items: start;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  margin-bottom: 1em;
+  align-content: center;
 }
 
 .grid-alignment-child {
-  width: auto;
+  aspect-ratio: 1;
   min-height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 400px;
+  }
 }
 
 /* Story section specific styles */
@@ -244,19 +230,6 @@ div.scroll-container img {
   text-align: right;
   margin-right: 1em;
   height: 100vh;
-}
-
-.portrait {
-  position: relative;
-  width: 400px;
-  margin-left: auto;
-}
-
-.portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
 }
 
 div.gallery:hover {
@@ -456,6 +429,12 @@ a {
     margin-bottom: 15px; /* Space below paragraphs */
 }
 
+img {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .grid-child-news {
   padding: 1px;
   float: center;
@@ -472,4 +451,39 @@ a {
   color: var(--civilian-color);
   max-width: 300px;
   }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-family: "clarendon wide sketch", serif;
+        font-size: 36px;
+        color: var(--detective-color);
+    }
+
+    .special-headline {
+        font-size: 48px;
+    }
+
+    p {
+        font-family: "arponasans", sans-serif;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+    .grid-alignment-parent {
+        grid-template-columns: 1fr;
+    }
+
+    .content-wrapper {
+        img {
+            width: 100%;
+        }
+        video {
+            width: 100%;
+        }
+      }
+    
+    img {
+        width: 100%;
+    }
 }
