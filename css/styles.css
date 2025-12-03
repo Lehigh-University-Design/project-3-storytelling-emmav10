@@ -429,12 +429,6 @@ a {
     margin-bottom: 15px; /* Space below paragraphs */
 }
 
-img {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
 .grid-child-news {
   padding: 1px;
   float: center;
